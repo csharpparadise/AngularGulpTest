@@ -13,7 +13,7 @@
         controllerAs: 'main'
       })
       .when('/about', {
-        templateUrl: 'app/components/about/about.html',
+        templateUrl: 'app/about/index.html',
         controller: 'AboutController',
         controllerAs: 'ctrl'
       })
