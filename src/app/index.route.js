@@ -17,11 +17,20 @@
         controller: 'AboutController',
         controllerAs: 'ctrl'
       })
+      .when('/movie/:page?',{
+        templateUrl: 'app/movie/index.html',
+        controller: 'MovieController',
+        controllerAs: 'ctrl'
+      })
+      .when('/movie/:movieId/:movieName',{
+        templateUrl: 'app/movie/detail.html',
+        controller: 'MovieDetailController',
+        controllerAs: 'ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
 
       $locationProvider.html5Mode(true);
   }
-
 })();

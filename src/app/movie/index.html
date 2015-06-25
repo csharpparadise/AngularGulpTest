@@ -1,0 +1,11 @@
+<h2>My Movies</h2>
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="movie in movieList | limitTo:pageSize:filterIndex*pageSize">
+    <i class="glyphicon glyphicon-film"></i>
+    <strong>{{movie.name}}</strong>
+    <a href="/movie/{{movie.id}}/{{movie.name}}">Details</a>
+  </li>
+</ul>
+
+<pagination total-items="totalItems" ng-model="currentPage"></pagination>
+<pre>The selected page no: {{currentPage}}</pre>
