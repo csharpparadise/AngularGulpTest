@@ -27,6 +27,11 @@
         controller: 'MovieDetailController',
         controllerAs: 'ctrl'
       })
+      .when('/dashboard', {
+        templateUrl: 'app/dashboard/dashboard.html',
+        controller: 'DashboardController',
+        controllerAs: 'ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -41,8 +41,6 @@
 
   /** @ngInject */
   function MovieDetailController($scope, $routeParams) {
-    var vm = this;
-
     $scope.params = $routeParams;
   }
 })();
