@@ -35,7 +35,7 @@
       getLiveChartData(0, true);
       getLiveChartData(1);
       getLiveChartData(2);
-    }, 100);
+    }, 40);
 
     function getLiveChartData(index, withLabels) {
       if ($scope.data[index].length) {
