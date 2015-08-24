@@ -1,0 +1,13 @@
+<h2>SignalR Chat w/ AngularJS (ngSignalR)</h2>
+
+<div id="chat">
+  <div ng-repeat="msg in messages">
+    {{msg}}
+  </div>
+</div>
+
+<form class="form" class="form-inline" novalidate>
+  <input type="text" name="message" class="form-control" required placeholder="insert your message here">
+  <button type="button">Send</button>
+  <button type="button">Join</button>
+</form>

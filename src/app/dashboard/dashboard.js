@@ -7,11 +7,13 @@
 
   /** @ngInject */
   function DashboardController($scope, $interval) {
-    var maximum = 100;
+    var maximum = 250;
     $scope.labels = [];
     $scope.series = ['Aktuelle Aufträge', 'in Bearbeitung', 'gesperrt'];
     $scope.data = [
-      [], [], []
+      [],
+      [],
+      []
     ];
     $scope.options = {
       animation: false,
@@ -20,7 +22,8 @@
       showTooltips: false,
       pointDot: false,
       datasetStrokeWidth: 1.5,
-      datasetFill: false, scaleShowVerticalLines: false
+      datasetFill: false,
+      scaleShowVerticalLines: false
     };
 
     function getRandomValue(data) {
@@ -39,12 +42,16 @@
 
     function getLiveChartData(index, withLabels) {
       if ($scope.data[index].length) {
-         if (withLabels) $scope.labels = $scope.labels.slice(1);
+        if (withLabels) {
+          $scope.labels = $scope.labels.slice(1);
+        }
         $scope.data[index] = $scope.data[index].slice(1);
       }
 
       while ($scope.data[index].length < maximum) {
-        if (withLabels) $scope.labels.push('');
+        if (withLabels) {
+          $scope.labels.push('');
+        }
         $scope.data[index].push(getRandomValue($scope.data[index]));
       }
     }

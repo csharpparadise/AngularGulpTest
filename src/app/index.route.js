@@ -32,6 +32,11 @@
         controller: 'DashboardController',
         controllerAs: 'ctrl'
       })
+      .when('/chat', {
+        templateUrl: 'app/chat/index.html',
+        controller: 'ChatController',
+        controllerAs: 'ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
